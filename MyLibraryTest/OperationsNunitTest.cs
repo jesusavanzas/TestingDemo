@@ -50,11 +50,16 @@ namespace MyLibrary
         //}
         public void AddDecimal_InputDoubleNumbers_ReturnsDoubleNumber(double number1, double number2)
         {
+
+            [Test]
+            [TestCase(2.2,1.2)]
+            [TestCase(2.23, 1.24)]
             // 1 arrange
             Operations operations1 = new ();
 
             //2 act
-            double result= Operations.EqualsTo(3.4.within (0.1));
+            double result = Operations.AddDecimal(number1, number2);
+            Assert.That (result, Is.Equals(3.4).Within (0.1));
 
             //asserts
             // arreglar esto!!! Assert.res
